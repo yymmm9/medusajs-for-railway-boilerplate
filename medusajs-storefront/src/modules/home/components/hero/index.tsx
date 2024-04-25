@@ -10,7 +10,8 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Well done! You have successfully deployed your Medusa store on Railway!
+            Nostrud dolor reprehenderit adipisicing cillum id do esse occaecat
+            occaecat magna et mollit cillum.
           </Heading>
           <Heading
             level="h2"
@@ -19,13 +20,8 @@ const Hero = () => {
             Need help customizing your store?
           </Heading>
         </span>
-        <a
-          href="https://funkyton.com/tutorial-customize-your-medusajs-webshop-storefron/"
-          target="_blank"
-        >
-          <h1 style={{ textDecoration: "underline" }}>
-            Visit the tutorial
-          </h1>
+        <a href="/" target="_blank">
+          <h1 style={{ textDecoration: "underline" }}>Visit</h1>
         </a>
       </div>
     </div>
