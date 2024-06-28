@@ -26,17 +26,32 @@ export default function ProductRail({
           View all
         </InteractiveLink>
       </div>
-      <ul className="grid grid-cols-2 small:grid-cols-3 gap-x-4 gap-y-12 small:gap-y-36">
+      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 large:grid-cols-5 gap-4">
+        {/* {
+    id: 'prod_01J17XRVQEF7355AFHAMR9V0JQ',
+    title: 'Black Floral Logo Baseball Cap',
+    handle: 'black-floral-logo-baseball-cap',
+    thumbnail: null,
+    created_at: '2024-06-25T14:46:04.768Z',
+    price: {
+      calculated_price: '$999,999.00',
+      original_price: '$999,999.00',
+      difference: '0',
+      price_type: 'default'
+    }
+  }[] */}
         {products &&
-          products.map((product) => (
-            <li key={product.id}>
-              <ProductPreview
-                productPreview={product}
-                region={region}
-                isFeatured
-              />
-            </li>
-          ))}
+          products.map((product) =>
+            product.thumbnail ? (
+              <li key={product.id}>
+                <ProductPreview
+                  productPreview={product}
+                  region={region}
+                  isFeatured
+                />
+              </li>
+            ) : null
+          )}
       </ul>
     </div>
   )

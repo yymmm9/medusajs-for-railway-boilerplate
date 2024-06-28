@@ -4,6 +4,8 @@ import { getCategoriesList, getCollectionsList } from "@lib/data"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import { Logo } from "@modules/common/icons/logo"
+import { footerMenu } from "@lib/config"
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
@@ -104,40 +106,27 @@ export default async function Footer() {
             <div className="flex flex-col gap-y-2">
               <span className="txt-small-plus txt-ui-fg-base">About</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Irure laborum
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Incididunt labore
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Tempor enim.
-                  </a>
-                </li>
+                {footerMenu.map((item: any) => {
+                  return (
+                    <li>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-ui-fg-base"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </div>
         </div>
+
+        <Logo className="w-full -mt-20" />
+
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} ISAiDNO. All rights reserved.

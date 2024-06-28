@@ -39,7 +39,7 @@ export default async function ProductPreview({
   if (!pricedProduct) {
     return null
   }
-  let image = pricedProduct?.images?.[0].url || null
+  let image = pricedProduct?.images?.[1]?.url || null
 
   const { cheapestPrice } = getProductPrice({
     product: pricedProduct,
@@ -59,9 +59,9 @@ export default async function ProductPreview({
         )}
         <div className="flex txt-compact-medium mt-4 justify-between">
           <Text className="text-ui-fg-subtle">{productPreview.title}</Text>
-          <div className="flex items-center gap-x-2">
+          {/* <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
-          </div>
+          </div> */}
         </div>
       </div>
     </LocalizedClientLink>

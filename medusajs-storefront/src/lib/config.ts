@@ -11,3 +11,19 @@ export const medusaClient = new Medusa({
   baseUrl: MEDUSA_BACKEND_URL,
   maxRetries: 3,
 })
+
+
+export const footerMenu = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "/about",
+  },
+  {
+    name: "Contact",
+    url: "/contact",
+  },
+]

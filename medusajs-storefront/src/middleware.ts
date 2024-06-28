@@ -85,6 +85,16 @@ async function getCountryCode(
  */
 export async function middleware(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
+
+  const url = request.nextUrl;
+  const pathname = url.pathname;
+  const imageFileRegex = /\.(png|jpg|jpeg|gif|webp|svg)$/;
+
+  // Skip middleware processing for image files
+  if (imageFileRegex.test(pathname)) {
+    return NextResponse.next();
+  }
+
   const isOnboarding = searchParams.get("onboarding") === "true"
   const cartId = searchParams.get("cart_id")
   const checkoutStep = searchParams.get("step")
