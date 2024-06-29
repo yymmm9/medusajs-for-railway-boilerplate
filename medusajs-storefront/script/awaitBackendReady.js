@@ -6,7 +6,8 @@ const checkBackend = () => {
   const url = (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || 'http://localhost:9000') + '/store/product-categories?expand=category_children';
   let elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-  if (elapsedTime > 1200) { // 20 minutes in seconds
+  if (elapsedTime > 300) { // 5 minutes in seconds
+    // if (elapsedTime > 1200) { // 20 minutes in seconds
     console.log('Timeout: Backend was not ready within 20 minutes.');
     process.exit(1); // Exit script with error
   }
