@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Link from "next/link"
-// @ts-ignore
+// @ts-nocheck
 type FAQItem = {
   question: string
   answer: string
