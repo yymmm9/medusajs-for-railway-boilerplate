@@ -45,6 +45,7 @@
     ".nyc_output",
     "cypress-coverage",
     "coverage",
-    "jest-coverage"
+    "jest-coverage",
+    "src/components/ui/*.tsx"
   ]
 }

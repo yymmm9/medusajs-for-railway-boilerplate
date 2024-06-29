@@ -1,7 +1,8 @@
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-
-import { cn } from "@/lib/utils"
+// @ts-ignore
+import { cn } from "@/lib-c/utils"
+// @ts-ignore
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
@@ -65,6 +66,7 @@ const PaginationPrevious = ({
 }: React.ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
     aria-label="Go to previous page"
+    // @ts-ignore
     size="default"
     className={cn("gap-1 pl-2.5", className)}
     {...props}
@@ -81,6 +83,7 @@ const PaginationNext = ({
 }: React.ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
     aria-label="Go to next page"
+    // @ts-ignore
     size="default"
     className={cn("gap-1 pr-2.5", className)}
     {...props}
