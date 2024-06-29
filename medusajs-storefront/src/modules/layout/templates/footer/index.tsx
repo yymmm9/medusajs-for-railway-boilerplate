@@ -108,7 +108,7 @@ export default async function Footer() {
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 {footerMenu.map((item: any) => {
                   return (
-                    <li>
+                    <li key={item.name}>
                       <a
                         href={item.url}
                         target="_blank"

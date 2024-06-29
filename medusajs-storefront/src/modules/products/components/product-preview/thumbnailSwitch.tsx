@@ -3,7 +3,7 @@ import { ProductPreviewType } from "types/global"
 import Thumbnail from "../thumbnail"
 import { motion } from "framer-motion"
 
-export default async function ThumbnailSwitch({
+export default function ThumbnailSwitch({
   productPreview,
   isFeatured,
   image,
