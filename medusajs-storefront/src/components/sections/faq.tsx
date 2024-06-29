@@ -1,20 +1,20 @@
-import * as Craft from "@/components/craft";
+import * as Craft from "@/components/craft"
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react"
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import Link from "next/link";
-
+} from "@/components/ui/accordion"
+import Link from "next/link"
+// @ts-ignore
 type FAQItem = {
-  question: string;
-  answer: string;
-  link?: string;
-};
+  question: string
+  answer: string
+  link?: string
+}
 
 const content: FAQItem[] = [
   {
@@ -38,7 +38,7 @@ const content: FAQItem[] = [
     answer:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
-];
+]
 
 const FAQ = ({ data }: { data: FAQItem[] }) => {
   return (
@@ -76,7 +76,7 @@ const FAQ = ({ data }: { data: FAQItem[] }) => {
         </div>
       </Craft.Container>
     </Craft.Section>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ
