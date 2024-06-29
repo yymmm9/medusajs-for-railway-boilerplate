@@ -46,6 +46,5 @@
     "cypress-coverage",
     "coverage",
     "jest-coverage",
-    "src/components/ui/*.tsx"
   ]
 }
