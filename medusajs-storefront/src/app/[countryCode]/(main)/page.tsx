@@ -260,6 +260,7 @@ export default async function Home({
 
       <DisplayCategory variant={"full"} />
       <DisplayCategory variant={"half"} />
+
       <DisplayCategory variant={"grid"} />
 
       <DisplayCategorySlider />
